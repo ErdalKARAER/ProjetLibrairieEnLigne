@@ -54,10 +54,10 @@
               <form action="../traitement/traitement_modif.php" method="post">
                   <input hidden  name="id" value=<?php echo $valeur['id']?>>
                   Nom : <input type="text" name="nom" placeholder="<?php echo $valeur['nom']?>"><br>
-                  Prenom : <input type="text" name="nom" placeholder="<?php echo $valeur['prenom']?>"><br>
-                  Age : <input type="text" name="nom" placeholder="<?php echo $valeur['age']?>"><br>
-                  Email : <input type="text" name="nom" placeholder="<?php echo $valeur['email']?>"><br>
-                  Téléphone : <input type="text" name="nom" placeholder="<?php echo $valeur['tel']?>"><br>
+                  Prenom : <input type="text" name="prenom" placeholder="<?php echo $valeur['prenom']?>"><br>
+                  Age : <input type="text" name="age" placeholder="<?php echo $valeur['age']?>"><br>
+                  Email : <input type="text" name="email" placeholder="<?php echo $valeur['email']?>"><br>
+                  Téléphone : <input type="text" name="tel" placeholder="<?php echo $valeur['tel']?>"><br>
                   <br>
                   Cliquez pour validez vos choix : <br>
                   <input type="submit" value="Valider"/>

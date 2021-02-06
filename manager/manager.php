@@ -66,20 +66,17 @@ else {
   }
   public function modifiation($co)
   {
-
-    if(isset($_POST['ins'])) {
-
-        $bdd = new PDO('mysql:host=localhost;dbname=user;charset=utf8', 'root', '');
-        $req = $bdd->prepare("UPDATE user SET nom=:nom, prenom=:prenom, age=:age,metier=:metier,pays=:pays  WHERE id = :id");
-        $res = $req->execute(array('nom' => $_POST['nom'],
-            'prenom' => $_POST['prenom'],
-            'age' => $_POST['age'],
-            'metier' => $_POST['metier'],
-            'pays' => $_POST['pays'],
-            'id' => $_POST['id']));
+        $bddmod = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
+        $reqmod = $bddmod->prepare("UPDATE connexion SET prenom=:prenom, nom=:nom, email=:email, tel=:tel, age=:age  WHERE id = :id");
+        $resmod = $reqmod->execute(array('prenom' =>$co->getPrenom(),
+        'nom'=>$co->getNom(),
+        'email'=>$co->getEmail(),
+        'tel'=>$co->getTel(),
+        'age'=>$co->getAge(),
+        'id' => $_POST['id']));
 
 
-        if ($res) {
+        if ($resmod){
 
             echo 'Modification effectuée';
             echo '<form action="espace_membre.php.php">
@@ -97,6 +94,5 @@ else {
 
         }
     }
-}
 }
 ?>
