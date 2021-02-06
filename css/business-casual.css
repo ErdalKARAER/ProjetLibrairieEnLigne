@@ -263,3 +263,8 @@ p {
 label{
 width: 150px;
 }
+
+.espace_membre{
+  display: block;
+  margin-right: auto;
+}

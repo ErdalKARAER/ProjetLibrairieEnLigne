@@ -41,7 +41,7 @@
             <h2 class="section-heading mb-4">
               <span class="section-heading-upper">Votre compte</span>
             </h2>
-            <div class="form_inscription">
+            <div class="espace_membre">
             <h1>Vos informations : </h1>
               <?php
               session_start();
@@ -51,22 +51,25 @@
               $res = $req->fetchall();
               foreach($res as $valeur){
               ?>
-              <form action="traitement_modifier.php" method="post">
-              <input hidden  name="id" value=<?php echo $valeur['id']?>>
+              <p>
+                  <p hidden><?php echo $valeur['id']?></p hidden>
                   Nom :
-                  <input type="text" name="nom" value=<?php echo $valeur['nom']?>><br>
+                  <?php echo $valeur['nom']?><br>
                   Prenom :
-                  <input type="text" name="prenom" value=<?php echo $valeur['prenom']?>><br>
+                  <?php echo $valeur['prenom']?><br>
                   Age :
-                  <input type="text" name="age" value=<?php echo $valeur['age']?>><br>
-                  Email:
-                  <input type="text" name="email" value=<?php echo $valeur['email']?>><br>
+                  <?php echo $valeur['age']?><br>
+                  Email :
+                  <?php echo $valeur['email']?><br>
                   Téléphone :
-                  <input type="text" name="pays" value=<?php echo $valeur['tel'] ?>><br>
-                  Cliquer pour modifier vos informations :
-                  <input type="submit" name="Modifier" value="Modifier"/><br>
+                  <?php echo $valeur['tel']?><br>
+                  <br>
+                  Cliquez pour modifier vos informations :
+                  <form action="../Vues/form_connexion.php"><br>
+                  <input type="submit" value="Modifier"/>
+                  </form>
               <?php }?>
-              </form>
+            </p>
             </div>
           </div>
         </div>
