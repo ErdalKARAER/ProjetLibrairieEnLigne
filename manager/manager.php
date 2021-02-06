@@ -56,7 +56,7 @@ else {
     {
       session_start();
       $_SESSION['email'] = $co->getEmail();
-      
+
       header('Location: ../index.php ');
     }
     else {
@@ -66,15 +66,38 @@ else {
     </form>';
     }
   }
-  public function NavBar()
+  public function modifiation($co)
   {
-    if (isset($_SESSION['email']))
-    {
-      include "include/navbar2.php";
+
+    if(isset($_POST['ins'])) {
+
+        $bdd = new PDO('mysql:host=localhost;dbname=user;charset=utf8', 'root', '');
+        $req = $bdd->prepare("UPDATE user SET nom=:nom, prenom=:prenom, age=:age,metier=:metier,pays=:pays  WHERE id = :id");
+        $res = $req->execute(array('nom' => $_POST['nom'],
+            'prenom' => $_POST['prenom'],
+            'age' => $_POST['age'],
+            'metier' => $_POST['metier'],
+            'pays' => $_POST['pays'],
+            'id' => $_POST['id']));
+
+
+        if ($res) {
+
+            echo 'Modification effectuée';
+            echo '<form action="espace_membre.php.php">
+        <input type="submit"  value="Retour"/><br>
+
+    </form>';
+
+        } else {
+
+            echo 'erreur';
+            echo '<form action="modifier.php.php">
+        <input type="submit"  value="Retour"/><br>
+
+    </form>';
+
+        }
     }
-    else {
-      include "include/navbar.php";
-    }
-  }
 }
 ?>
