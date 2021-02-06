@@ -41,8 +41,8 @@
             <h2 class="section-heading mb-4">
               <span class="section-heading-upper">Votre compte</span>
             </h2>
-            <div class="espace_membre">
-            <h1>Vos informations : </h1>
+            <div class="modif_espace_membre">
+            <h1>Modification : </h1>
               <?php
               session_start();
               $bdd = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
@@ -51,26 +51,19 @@
               $res = $req->fetchall();
               foreach($res as $valeur){
               ?>
-              <p>
-                  <p hidden><?php echo $valeur['id']?></p hidden>
-                  Nom :
-                  <?php echo $valeur['nom']?><br>
-                  Prenom :
-                  <?php echo $valeur['prenom']?><br>
-                  Age :
-                  <?php echo $valeur['age']?><br>
-                  Email :
-                  <?php echo $valeur['email']?><br>
-                  Téléphone :
-                  <?php echo $valeur['tel']?><br>
+              <form action="../traitement/traitement_modif.php" method="post">
+                  <input hidden  name="id" value=<?php echo $valeur['id']?>>
+                  Nom : <input type="text" name="nom" placeholder="<?php echo $valeur['nom']?>"><br>
+                  Prenom : <input type="text" name="nom" placeholder="<?php echo $valeur['prenom']?>"><br>
+                  Age : <input type="text" name="nom" placeholder="<?php echo $valeur['age']?>"><br>
+                  Email : <input type="text" name="nom" placeholder="<?php echo $valeur['email']?>"><br>
+                  Téléphone : <input type="text" name="nom" placeholder="<?php echo $valeur['tel']?>"><br>
                   <br>
-                  Cliquez pour modifier vos informations :
-                  <form action="../vue/modificationmembre.php"><br>
-                  <input type="submit" value="Modifier"/>
-                  </form>
+                  Cliquez pour validez vos choix : <br>
+                  <input type="submit" value="Valider"/>
               <?php }?>
-            </p>
-            </div>
+            </form>
+          </div>
           </div>
         </div>
       </div>
