@@ -31,13 +31,13 @@ else {
                           var_dump($co);
       if($res2){
       echo "Le compte a bien été créer.";
-      echo '<form action="../Vues/formulaire_connexion.php">
+      echo '<form action="../Vues/form_connexion.php">
       <input type="submit"  value="Connexion"/><br>
   </form>';
       }
       else {
           echo 'ERREUR';
-          echo '<form action="../Vues/formulaire_inscription.php">
+          echo '<form action="../Vues/form_inscri.php">
           <input type="submit"  value="Retour"/><br>
 
       </form>';
@@ -61,7 +61,7 @@ else {
     }
     else {
       echo "erreur";
-      echo '<form action="../Vues/formulaire_connexion.php">
+      echo '<form action="../Vues/form_connexion.php">
       <input type="submit"  value="Retour"/><br>
     </form>';
     }
@@ -99,5 +99,6 @@ else {
 
         }
     }
+}
 }
 ?>

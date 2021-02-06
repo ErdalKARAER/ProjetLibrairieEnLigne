@@ -30,14 +30,7 @@
   </h1>
 
   <!-- Navbar -->
-  <?php require_once 'manager/manager.php';
-        require_once 'model/connexion.php';
-        $nav = new manager();
-        $nav->NavBar();?>
-
-
-      
-
+  <?php include "./include/navbar.php"; ?>
   <!-- Navbar -->
 
   <section class="page-section clearfix">

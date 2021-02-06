@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../css/business-casual.min.css" rel="stylesheet">
+  <link href="../css/business-casual.css" rel="stylesheet">
 
 </head>
 
@@ -44,17 +44,17 @@
             <div class="form_inscription">
             <h1>Bienvenue, inscrivez-vous : </h1>
             <form action="../traitement/traitement_inscri.php" method="post">
-              <p>
-                Prenom : <input type="text" name="nom" placeholder="Ex : Jean"required/><br>
-                Nom : <input type="text" name="prenom"required/><br>
-                Age : <input type="text" name="age" maxlength="2" required/><br>
-                Mail : <input type="text" name="email"required/><br>
-                Téléphone : <input type="text" name="tel" maxlength="10" required/><br>
+
+              <label>Nom :</label><input type="text" name="nom" placeholder="Ex : Jean"required/><br>
+              <label>Prenom :</label><input type="text" name="prenom"required/><br>
+              <label>Age :</label><input type="text" name="age" maxlength="2" required/><br>
+              <label>Email :</label><input type="text" name="email"required/><br>
+              <label>Téléphone :</label><input type="text" name="tel" maxlength="10" required/><br>
                 <br>
-                Mot de passe : <input type="password" name="pwd"required/><br>
-                Confirmer votre mot de passe : <input type="password" name="pwd2"required/><br>
-                <br>azez
-              </p>
+              <label>Mot de passe :</label><input type="password" name="pwd"required/><br>
+                <label>Confirmer votre mot de passe :</label><input type="password" name="pwd2"required/><br>
+                <br>
+
                 <input type="submit" value="Inscription"/><br>
               </form>
             </div>
