@@ -10,7 +10,7 @@ $req->execute(array('email'=>$co->getEmail()));
 $res = $req->fetch();
 if($res)
 {
-  echo "erreur, nom deja existant";
+  echo "erreur, cet email est déjà utilisé";
   echo '<form action="../Vues/formulaire_inscription.php">
   <input type="submit"  value="Retour"/><br>
 </form>';
@@ -46,7 +46,7 @@ else {
   }
   public function connexion($co)
   {
-    $bddco = new PDO('mysql:host=localhost;dbname=exercicepdo;charset=utf8', 'root', '');
+    $bddco = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
     $reqco = $bddco->prepare("SELECT pwd FROM connexion WHERE pwd = :pwd");
     $reqco->execute(array(
       "pwd"=>$co->getPwd()
