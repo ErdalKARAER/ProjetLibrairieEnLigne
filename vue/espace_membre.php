@@ -18,7 +18,7 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
-  <link href="../css/business-casual.min.css" rel="stylesheet">
+  <link href="../css/business-casual.css" rel="stylesheet">
 
 </head>
 
@@ -39,23 +39,33 @@
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Inscription</span>
+              <span class="section-heading-upper">Votre compte</span>
             </h2>
             <div class="form_inscription">
-            <h1>Bienvenue, inscrivez-vous : </h1>
-            <form action="../traitement/traitement_inscri.php" method="post">
-              <p>
-                Prenom : <input type="text" name="nom" placeholder="Ex : Jean"required/><br>
-                Nom : <input type="text" name="prenom"required/><br>
-                Age : <input type="text" name="age" maxlength="2" required/><br>
-                Mail : <input type="text" name="email"required/><br>
-                Téléphone : <input type="text" name="tel" maxlength="10" required/><br>
-                <br>
-                Mot de passe : <input type="password" name="pwd"required/><br>
-                Confirmer votre mot de passe : <input type="password" name="pwd2"required/><br>
-                <br>azez
-              </p>
-                <input type="submit" value="Inscription"/><br>
+            <h1>Vos informations : </h1>
+              <?php
+              session_start();
+              $bdd = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
+              $req = $bdd->prepare("SELECT * FROM connexion WHERE email = :email");
+              $req->execute(array('email'=> $_SESSION['email']));
+              $res = $req->fetchall();
+              foreach($res as $valeur){
+              ?>
+              <form action="traitement_modifier.php" method="post">
+              <input hidden  name="id" value=<?php echo $valeur['id']?>>
+                  Nom :
+                  <input type="text" name="nom" value=<?php echo $valeur['nom']?>><br>
+                  Prenom :
+                  <input type="text" name="prenom" value=<?php echo $valeur['prenom']?>><br>
+                  Age :
+                  <input type="text" name="age" value=<?php echo $valeur['age']?>><br>
+                  Email:
+                  <input type="text" name="email" value=<?php echo $valeur['email']?>><br>
+                  Téléphone :
+                  <input type="text" name="pays" value=<?php echo $valeur['tel'] ?>><br>
+                  Cliquer pour modifier vos informations :
+                  <input type="submit" name="Modifier" value="Modifier"/><br>
+              <?php }?>
               </form>
             </div>
           </div>

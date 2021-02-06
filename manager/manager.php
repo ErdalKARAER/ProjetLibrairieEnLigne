@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 class manager{
 
@@ -52,7 +53,6 @@ else {
     $resco = $reqco->fetch();
     if($resco)
     {
-      session_start();
       $_SESSION['email'] = $co->getEmail();
 
       header('Location: ../index.php ');
