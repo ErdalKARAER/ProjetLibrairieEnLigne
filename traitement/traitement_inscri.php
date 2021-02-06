@@ -9,7 +9,7 @@ $co = new connexion(array(
               'email' => $_POST['email'],
               'tel' => $_POST['tel'],
               'age' => $_POST['age'],
-              'pwd' => $_POST['pwd']
+              'pwd' =>password_hash($_POST['pwd'], PASSWORD_DEFAULT)
             ));
 
 $man = new manager();

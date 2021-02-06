@@ -48,11 +48,9 @@ else {
   {
     $bddco = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
     $reqco = $bddco->prepare("SELECT pwd FROM connexion WHERE pwd = :pwd");
-    $reqco->execute(array(
-      "pwd"=>$co->getPwd()
-    ));
+    $reqco->execute(array("pwd"=>$co->getPwd()));
     $resco = $reqco->fetch();
-    if($reqco)
+    if($resco)
     {
       session_start();
       $_SESSION['email'] = $co->getEmail();
