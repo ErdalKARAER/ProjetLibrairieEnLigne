@@ -64,7 +64,7 @@ else {
     </form>';
     }
   }
-  public function modifiation($co)
+  public function modification($co)
   {
         $bddmod = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
         $reqmod = $bddmod->prepare("UPDATE connexion SET prenom=:prenom, nom=:nom, email=:email, tel=:tel, age=:age  WHERE id = :id");

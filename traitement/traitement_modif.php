@@ -12,6 +12,6 @@ $co = new connexion(array(
             ));
 
 $man = new manager();
-$man->modifiction($co);
+$man->modification($co);
 var_dump($_POST);
 ?>
