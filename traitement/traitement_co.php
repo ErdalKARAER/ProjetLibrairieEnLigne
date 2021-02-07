@@ -5,7 +5,7 @@ require_once '../model/connexion.php';
 
 $co = new connexion(array(
               'email' => $_POST['email'],
-              'pwd' => $_POST['pwd']
+              'pwd' => password_hash($_POST['pwd'], PASSWORD_DEFAULT)
             ));
 
 $man = new manager();

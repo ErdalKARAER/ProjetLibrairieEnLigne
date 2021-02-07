@@ -32,7 +32,7 @@ else {
                           var_dump($co);
       if($res2){
       echo "Le compte a bien été créer.";
-      echo '<form action="../Vues/form_connexion.php">
+      echo '<form action="../index.php">
       <input type="submit"  value="Connexion"/><br>
   </form>';
       }
