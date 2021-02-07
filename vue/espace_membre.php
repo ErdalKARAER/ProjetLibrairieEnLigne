@@ -44,7 +44,6 @@
             <div class="espace_membre">
             <h1>Vos informations : </h1>
               <?php
-              session_start();
               $bdd = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
               $req = $bdd->prepare("SELECT * FROM connexion WHERE email = :email");
               $req->execute(array('email'=> $_SESSION['email']));

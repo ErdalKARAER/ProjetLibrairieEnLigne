@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <?php
-if(empty($_SESSION)) {
+session_start();
+if(empty($_SESSION['email'])) {
   ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -34,7 +35,7 @@ if(empty($_SESSION)) {
 </nav>
 <?php }; ?>
 <?php
-if(isset($_SESSION)) {
+if(isset($_SESSION['email'])) {
   ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -53,7 +54,7 @@ if(isset($_SESSION)) {
             <a class="nav-link text-uppercase text-expanded" href="./vue/espace_membre.php">Mon compte</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="./vue/form_connexion.php">Déconnexion</a>
+          <a class="nav-link text-uppercase text-expanded" href="./traitement/deconnexion.php">Déconnexion</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="products.html">Nos produits</a>
