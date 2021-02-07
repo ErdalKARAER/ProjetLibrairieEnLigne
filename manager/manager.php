@@ -79,7 +79,7 @@ else {
         if ($resmod){
 
             echo 'Modification effectuée';
-            echo '<form action="espace_membre.php.php">
+            echo '<form action="../index.php">
         <input type="submit"  value="Retour"/><br>
 
     </form>';
@@ -87,7 +87,7 @@ else {
         } else {
 
             echo 'erreur';
-            echo '<form action="modifier.php.php">
+            echo '<form action="espace_membre.php">
         <input type="submit"  value="Retour"/><br>
 
     </form>';
