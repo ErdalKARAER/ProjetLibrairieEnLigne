@@ -52,8 +52,6 @@ else {
     $reqco->execute(array("email"=>$co->getEmail()));
     $resco = $reqco->fetch();
     if (password_verify($co->getPwd(), $resco['pwd'])) {
-      if($resco)
-      {
         $_SESSION['email'] = $co->getEmail();
 
         header('Location: ../index.php ');
@@ -65,7 +63,6 @@ else {
       </form>';
       }
     }
-  }
 
 
   public function modification($co)
