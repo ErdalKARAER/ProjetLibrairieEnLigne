@@ -48,10 +48,14 @@ else {
   public function connexion($co)
   {
     $bddco = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
-    $reqco = $bddco->prepare("SELECT pwd FROM connexion WHERE email = :email");
+    $reqco = $bddco->prepare("SELECT * FROM connexion WHERE email = :email");
     $reqco->execute(array("email"=>$co->getEmail()));
     $resco = $reqco->fetch();
-    if (password_verify($co->getPwd(), $resco['pwd'])) {
+    if ($resco['admin'] == 1) {
+      $_SESSION['email'] = $co->getEmail();
+      header('Location: ../vue/panel_admin.php ');
+    }
+    elseif(password_verify($co->getPwd(), $resco['pwd'])) {
         $_SESSION['email'] = $co->getEmail();
 
         header('Location: ../index.php ');

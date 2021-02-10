@@ -269,6 +269,11 @@ width: 150px;
   margin-right: auto;
 }
 
+.panel_admin{
+  display: block;
+  margin-right: auto;
+}
+
 .modif_espace_membre{
   display: block;
   margin-right: auto;
