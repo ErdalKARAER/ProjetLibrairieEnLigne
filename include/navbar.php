@@ -78,18 +78,18 @@ if(isset($_SESSION['email'])) {
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item active px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="../index.php">Accueil
+            <a class="nav-link text-uppercase text-expanded" href="./exercice_php_erdal/projetkaraeramale/projetkaraeramale/index.php">Accueil
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="./vue/form_inscri.php">Mon compte</a>
+              <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/gestion_compte.php">Gestion des comptes</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="./vue/form_connexion.php">Connexion</a>
+            <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/traitement/deconnexion.php">Déconnexion</a>
           </li>
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="products.html">Nos produits</a>
+            <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/produits.php">Nos produits</a>
           </li>
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="store.html"></a>
