@@ -48,9 +48,13 @@ else {
   public function connexion($co)
   {
     $bddco = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
-    $reqco = $bddco->prepare("SELECT pwd FROM connexion WHERE pwd = :pwd");
-    $reqco->execute(array("pwd"=>$co->getPwd()));
+    $reqco = $bddco->prepare("SELECT pwd FROM connexion WHERE email = :email");
+    $reqco->execute(array("email"=>$co->getEmail()));
     $resco = $reqco->fetch();
+    if (password_verify($co->getPwd(), $resco['pwd'])) {
+      // code...
+    }
+    var_dump($co);
     if($resco)
     {
       $_SESSION['email'] = $co->getEmail();

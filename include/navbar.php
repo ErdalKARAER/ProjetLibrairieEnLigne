@@ -13,7 +13,7 @@ if(empty($_SESSION['email'])) {
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="../index.php">Accueil
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/index.php">Accueil
             <span class="sr-only">(current)</span>
           </a>
         </li>
