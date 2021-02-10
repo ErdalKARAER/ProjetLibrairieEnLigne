@@ -11,14 +11,14 @@
         <div class="col-xl-9 mx-auto">
           <div class="cta-inner text-center rounded">
             <h2 class="section-heading mb-4">
-              <span class="section-heading-upper">Utilisateurs inscrits</span>
+              <span class="section-heading-upper">ADMIN // Utilisateurs inscrits</span>
             </h2>
             <div class="panel_admin">
               <body>
                 <p>
                     Selection email : <br>
                     <form action="modif_user.php" method="post">
-                    <select name="nom">
+                    <select name="email">
               <?php
               $bdd = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8','root','');
               $choixnom = $bdd ->query('SELECT email FROM connexion');
@@ -32,7 +32,9 @@
 
               <br>
               <br>
-              Une fois l'utilisateur selectionne cliquez ici : <br><input type="submit" value="Valider" /><br>
+              Pour le modifier, cliquez ici : <br><input type="submit" value="Valider" /><br>
+              <form action="modif_user.php" method="post">
+              Pour le supprimer, cliquez ici : <br><input type="submit" value="Valider" /><br>
               </form>
             </div>
           </div>
