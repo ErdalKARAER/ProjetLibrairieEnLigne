@@ -18,10 +18,10 @@ if(empty($_SESSION['email'])) {
           </a>
         </li>
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="./vue/form_inscri.php">Inscription</a>
+            <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/form_inscri.php">Inscription</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="./vue/form_connexion.php">Connexion</a>
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/form_connexion.php">Connexion</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="products.html">Nos produits</a>
@@ -46,15 +46,15 @@ if(isset($_SESSION['email'])) {
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav mx-auto">
         <li class="nav-item active px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="../index.php">Accueil
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/index.php">Accueil
             <span class="sr-only">(current)</span>
           </a>
         </li>
         <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="./vue/espace_membre.php">Mon compte</a>
+            <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/espace_membre.php">Mon compte</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="./traitement/deconnexion.php">Déconnexion</a>
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale//traitement/deconnexion.php">Déconnexion</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="products.html">Nos produits</a>
