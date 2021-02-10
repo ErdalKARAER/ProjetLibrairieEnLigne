@@ -68,7 +68,9 @@ if(isset($_SESSION['email'])) {
 </nav>
 <?php }; ?>
 
-<?php if(isset($_SESSION['role']) == 1 ){ ?>
+
+
+<?php if(isset($_SESSION['admin']) == 1){ ?>
 
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">

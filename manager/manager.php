@@ -52,22 +52,22 @@ else {
     $reqco->execute(array("email"=>$co->getEmail()));
     $resco = $reqco->fetch();
     if (password_verify($co->getPwd(), $resco['pwd'])) {
-      // code...
-    }
-    var_dump($co);
-    if($resco)
-    {
-      $_SESSION['email'] = $co->getEmail();
+      if($resco)
+      {
+        $_SESSION['email'] = $co->getEmail();
 
-      header('Location: ../index.php ');
-    }
-    else {
-      echo "erreur";
-      echo '<form action="../Vues/form_connexion.php">
-      <input type="submit"  value="Retour"/><br>
-    </form>';
+        header('Location: ../index.php ');
+      }
+      else {
+        echo "erreur";
+        echo '<form action="../Vues/form_connexion.php">
+        <input type="submit"  value="Retour"/><br>
+      </form>';
+      }
     }
   }
+
+
   public function modification($co)
   {
         $bddmod = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8', 'root', '');
