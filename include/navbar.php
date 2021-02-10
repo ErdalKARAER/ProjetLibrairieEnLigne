@@ -24,7 +24,7 @@ if(empty($_SESSION['email'])) {
           <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/form_connexion.php">Connexion</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="products.html">Nos produits</a>
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/produits.php">Nos produits</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="store.html">Contact</a>
@@ -57,7 +57,7 @@ if(isset($_SESSION['email'])) {
           <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale//traitement/deconnexion.php">Déconnexion</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="products.html">Nos produits</a>
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/produits.php">Nos produits</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="store.html">Contact</a>
