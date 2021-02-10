@@ -44,7 +44,7 @@
             <!-- Tableau simple avec en-tête -->
 <table>
   <tr>
-    <th>Prénom</th>
+    <th>Nom du CD : </th>
     <th>Nom</th>
   </tr>
   <tr>
