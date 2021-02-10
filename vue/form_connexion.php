@@ -15,9 +15,9 @@
                 <h1>Connectez-vous : </h1>
                 <form action="../traitement/traitement_co.php" method="post">
                   <p>
-                    Mail : <input type="text" name="email"required/><br>
+                    Mail : <input type="text" name="email" required/><br>
                     <br>
-                      Mot de passe : <input type="password" name="pwd"required/><br>
+                      Mot de passe : <input type="password" name="pwd" required/><br>
                     <br>
                   </p>
                     <input type="submit" value="Connexion"/><br>
