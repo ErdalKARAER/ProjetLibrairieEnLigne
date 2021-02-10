@@ -54,7 +54,7 @@ if(isset($_SESSION['email'])) {
             <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/espace_membre.php">Mon compte</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale//traitement/deconnexion.php">Déconnexion</a>
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/traitement/deconnexion.php">Déconnexion</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/produits.php">Nos produits</a>
