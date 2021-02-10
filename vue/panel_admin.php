@@ -32,9 +32,9 @@
 
               <br>
               <br>
-              Pour le modifier, cliquez ici : <br><input type="submit" value="Valider" /><br>
-              <form action="modif_user.php" method="post">
-              Pour le supprimer, cliquez ici : <br><input type="submit" value="Valider" /><br>
+              Pour le modifier, cliquez ici : <br><input type="submit" value="Modifier" /><br>
+              <form action="../traitement/traitement_supp.php" method="post">
+              Pour le supprimer, cliquez ici : <br><input type="submit" value="Supprimer" /><br>
               </form>
             </div>
           </div>

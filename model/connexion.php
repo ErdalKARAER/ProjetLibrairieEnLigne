@@ -1,6 +1,6 @@
 <?php
 
-class connexion{
+class user{
 
   private $nom;
   private $prenom;
