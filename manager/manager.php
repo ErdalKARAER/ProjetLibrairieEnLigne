@@ -29,7 +29,6 @@ else {
                       'pwd'=>$co->getPwd(),
                       'admin'=>(int)0
                           ));
-                          var_dump($co);
       if($res2){
       echo "Le compte a bien été créer.";
       echo '<form action="../index.php">

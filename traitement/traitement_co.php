@@ -1,9 +1,9 @@
 <?php
 
 require_once '../manager/manager.php';
-require_once '../model/connexion.php';
+require_once '../model/utilisateur.php';
 
-$co = new connexion(array(
+$co = new utilisateur(array(
               'email' => $_POST['email'],
               'pwd' => $_POST['pwd']
             ));

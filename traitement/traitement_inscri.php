@@ -1,9 +1,9 @@
 <?php
 
 require_once '../manager/manager.php';
-require_once '../model/connexion.php';
+require_once '../model/utilisateur.php';
 
-$co = new connexion(array(
+$co = new utilisateur(array(
               'prenom' => $_POST['prenom'],
               'nom' => $_POST['nom'],
               'email' => $_POST['email'],
@@ -14,5 +14,4 @@ $co = new connexion(array(
 
 $man = new manager();
 $man->inscription($co);
-var_dump($_POST);
 ?>
