@@ -25,7 +25,7 @@
               foreach($res as $valeur){
               ?>
               <form action="../traitement/traitement_modif.php" method="post">
-                  <input hidden  name="id" value=<?php echo $valeur['id']?>
+                  <input hidden  name="id" value=<?php echo $valeur['id']?>>
                   <?php $_SESSION['id'] = $valeur['id']; ?>
                   Nom : <input type="text" name="nom" placeholder="<?php echo $valeur['nom']?>"><br>
                   Prenom : <input type="text" name="prenom" placeholder="<?php echo $valeur['prenom']?>"><br>
@@ -36,6 +36,9 @@
                   Cliquez pour le modifier : <br>
                   <input type="submit" value="Modifier"/>
               <?php }?>
+            </form>
+            <form action="../vue/panel_admin.php" method="post">
+              <br><input type="submit" value="Retour" /><br>
             </form>
           </div>
           </div>

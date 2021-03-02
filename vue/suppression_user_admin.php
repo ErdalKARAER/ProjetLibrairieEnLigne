@@ -17,7 +17,7 @@
               <body>
                 <p>
                     Selection email : <br>
-                    <form action="modif_user.php" method="post">
+                    <form action="../traitement/traitement_supp.php" method="post">
                     <select name="email">
               <?php
               $bdd = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8','root','');
@@ -32,13 +32,10 @@
 
               <br>
               <br>
-              Pour le modifier, cliquez ici : <br><input type="submit" value="Modifier" /><br>
+              Pour le supprimer, cliquez ici : <br><input type="submit" value="Supprimer" /><br>
             </form>
-              <form action="../vue/suppression_user_admin.php" method="post">
-              Pour supprimer un utilisateur, cliquez ici : <br><input type="submit" value="Supprimer" /><br>
-              </form>
-              <form action="../vue/ajout_user_admin.php" method="post">
-              Pour ajouter un utilisateur, cliquez ici : <br><input type="submit" value="Ajouter" /><br>
+              <form action="../vue/panel_admin.php" method="post">
+                <br><input type="submit" value="Retour" /><br>
               </form>
             </div>
           </div>

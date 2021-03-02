@@ -8,6 +8,7 @@ class utilisateur{
   private $email;
   private $tel;
   private $pwd;
+  private $admin;
 
 
   public function __construct($donnees){
@@ -50,6 +51,10 @@ class utilisateur{
   {
     return $this->pwd;
   }
+  public function getAdmin()
+  {
+    return $this->admin;
+  }
 
 
   public function setNom($nom){
@@ -85,6 +90,9 @@ class utilisateur{
         {
           $this->pwd = $pwd;
         }
+      }
+      public function setAdmin($admin){
+          $this->admin = (int)$admin;
       }
 
 }

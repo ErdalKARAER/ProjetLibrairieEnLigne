@@ -12,7 +12,7 @@ $res = $req->fetch();
 if($res)
 {
   echo "erreur, cet email est déjà utilisé";
-  echo '<form action="../Vues/formulaire_inscription.php">
+  echo '<form action="../index.php">
   <input type="submit"  value="Retour"/><br>
 </form>';
 }
@@ -36,8 +36,8 @@ else {
   </form>';
       }
       else {
-          echo 'ERREUR';
-          echo '<form action="../Vues/form_inscri.php">
+          echo 'Erreur dans la base de données';
+          echo '<form action="../index.php">
           <input type="submit"  value="Retour"/><br>
 
       </form>';
@@ -60,8 +60,8 @@ else {
         header('Location: ../index.php ');
       }
       else {
-        echo "erreur";
-        echo '<form action="../Vues/form_connexion.php">
+        echo "erreur, le mot de passe ou l'email est incorrect";
+        echo '<form action="../index.php">
         <input type="submit"  value="Retour"/><br>
       </form>';
       }
@@ -83,20 +83,77 @@ else {
         if ($resmod){
 
             echo 'Modification effectuée';
-            echo '<form action="../index.php">
+            echo '<form action="../vue/panel_admin.php">
         <input type="submit"  value="Retour"/><br>
 
     </form>';
 
         } else {
 
-            echo 'erreur';
+            echo 'erreur dans la base de donnéelseif';
             echo '<form action="espace_membre.php">
         <input type="submit"  value="Retour"/><br>
 
     </form>';
 
         }
+    }
+    public function inscription_admin($co)
+    {
+    $bdd = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8','root','');
+    $req = $bdd->prepare('SELECT email FROM connexion WHERE email = :email');
+    $req->execute(array('email'=>$co->getEmail()));
+    $res = $req->fetch();
+    if($res)
+    {
+      echo "erreur, cet email est déjà utilisé";
+      echo '<form action="../vue/panel_admin.php">
+      <input type="submit"  value="Retour"/><br>
+    </form>';
+    }
+
+    else {
+      $bdd2 = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8','root','');
+      $req2 = $bdd2->prepare("INSERT INTO connexion (prenom, nom, email, tel, age, pwd, admin) VALUES (:prenom, :nom, :email, :tel, :age, :pwd, :admin)");
+      $res2 = $req2->execute(array(
+                          'prenom'=>$co->getPrenom(),
+                          'nom'=>$co->getNom(),
+                          'email'=>$co->getEmail(),
+                          'tel'=>$co->getTel(),
+                          'age'=>$co->getAge(),
+                          'pwd'=>$co->getPwd(),
+                          'admin'=>$co->getAdmin()
+                              ));
+          if($res2){
+          echo "Le compte a bien été créer.";
+          echo '<form action="../vue/panel_admin.php">
+          <input type="submit"  value="Retour"/><br>
+      </form>';
+          }
+          else {
+              echo 'Erreur dans la base de données';
+              echo '<form action="../vue/panel_admin.php">
+              <input type="submit"  value="Retour"/><br>
+
+          </form>';
+          }
+        }
+      }
+
+      public function suppression($co)
+      {
+        $bddsupp = new PDO('mysql:host=localhost;dbname=projetbibliotheque;charset=utf8','root','');
+        $reqsupp = $bddsupp->prepare("DELETE FROM connexion WHERE email = :email");
+        $ressupp = $reqsupp->execute(array(
+                            'email'=>$co->getEmail(),
+                                ));
+            if($ressupp){
+
+              echo "La suppression a bien été effectuée.";
+              echo '<form action="../vue/panel_admin.php">
+              <input type="submit"  value="Retour"/><br>
+          </form>';
+      }
     }
 }
 ?>

@@ -8,10 +8,11 @@ $co = new utilisateur(array(
               'nom' => $_POST['nom'],
               'email' => $_POST['email'],
               'tel' => $_POST['tel'],
-              'age' => $_POST['age']
+              'age' => $_POST['age'],
+              'pwd' =>password_hash($_POST['pwd'], PASSWORD_DEFAULT),
+              'admin'=> $_POST['admin']
             ));
 
 $man = new manager();
-$man->suppression($co);
-var_dump($_POST);
+$man->inscription_admin($co);
 ?>
