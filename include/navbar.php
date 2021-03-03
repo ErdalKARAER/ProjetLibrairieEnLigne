@@ -24,7 +24,7 @@ if(empty($_SESSION['email'])) {  // Si l'utilisateur n'est pas connecté <=> Si 
           <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/form_connexion.php">Connexion</a>
         </li>
         <li class="nav-item px-lg-4">
-          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/produits.php">Nos produits</a>
+          <a class="nav-link text-uppercase text-expanded" href="/exercice_php_erdal/projetkaraeramale/projetkaraeramale/vue/produits/produits.php">Nos produits</a>
         </li>
         <li class="nav-item px-lg-4">
           <a class="nav-link text-uppercase text-expanded" href="store.html">Contact</a>

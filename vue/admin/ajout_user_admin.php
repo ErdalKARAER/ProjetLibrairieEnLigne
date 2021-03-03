@@ -16,19 +16,24 @@
             </h2>
             <div class="form_inscription">
             <h1>Bienvenue, inscrivez-vous : </h1>
-            <form action="../traitement/traitement_inscri.php" method="post">
+            <form action="../traitement/inscription_admin.php" method="post">
 
               <label>Nom :</label><input type="text" name="nom" placeholder="Ex : Jean"required/><br>
               <label>Prenom :</label><input type="text" name="prenom"required/><br>
               <label>Age :</label><input type="text" name="age" maxlength="2" required/><br>
               <label>Email :</label><input type="text" name="email"required/><br>
               <label>Téléphone :</label><input type="text" name="tel" maxlength="10" required/><br>
+              <label>Admin :</label><input type="text" name="admin" placeholder="1-admin/0-user" required/><br>
+
                 <br>
               <label>Mot de passe :</label><input type="password" name="pwd"required/><br>
                 <label>Confirmer votre mot de passe :</label><input type="password" name="pwd2"required/><br>
                 <br>
 
                 <input type="submit" value="Inscription"/><br>
+              </form>
+              <form action="../vue/panel_admin.php" method="post">
+                <br><input type="submit" value="Retour" /><br>
               </form>
             </div>
           </div>

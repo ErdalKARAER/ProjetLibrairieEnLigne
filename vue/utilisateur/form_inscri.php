@@ -16,15 +16,13 @@
             </h2>
             <div class="form_inscription">
             <h1>Bienvenue, inscrivez-vous : </h1>
-            <form action="../traitement/inscription_admin.php" method="post">
+            <form action="../traitement/traitement_inscri.php" method="post">
 
               <label>Nom :</label><input type="text" name="nom" placeholder="Ex : Jean"required/><br>
-              <label>Prenom :</label><input type="text" name="prenom"required/><br>
-              <label>Age :</label><input type="text" name="age" maxlength="2" required/><br>
-              <label>Email :</label><input type="text" name="email"required/><br>
-              <label>Téléphone :</label><input type="text" name="tel" maxlength="10" required/><br>
-              <label>Admin :</label><input type="text" name="admin" placeholder="1-admin/0-user" required/><br>
-
+              <label>Prenom :</label><input type="text" name="prenom" placeholder="Ex : Pierre" required/><br>
+              <label>Age :</label><input type="text" name="age" maxlength="2" placeholder="Ex : 23" required/><br>
+              <label>Email :</label><input type="text" name="email" placeholder="Ex : JP@hotmail.fr" required/><br>
+              <label>Téléphone :</label><input type="text" name="tel" maxlength="10" placeholder="Ex : 0652026123" required/><br>
                 <br>
               <label>Mot de passe :</label><input type="password" name="pwd"required/><br>
                 <label>Confirmer votre mot de passe :</label><input type="password" name="pwd2"required/><br>
